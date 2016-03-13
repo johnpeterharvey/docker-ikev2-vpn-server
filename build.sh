@@ -8,4 +8,4 @@ do
   sleep 1
 done
 sleep 5 #Give StrongSwan time to initialize
-docker run -it --rm --volumes-from ike -e "HOST=(curl ifconfig.me/ip)" ike generate-mobileconfig > ike.mobileconfig
+docker run -it --rm --volumes-from ike -e "HOST=`curl ifconfig.co`" ike generate-mobileconfig > ike.mobileconfig
