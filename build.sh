@@ -1,5 +1,7 @@
 #!/bin/bash
 docker build -t ike:latest .
+#Start the service with the required port configs
+docker run -d --name ike --privileged -p 500:500/udp -p 4500:4500/udp ike
 sudo cp ike.service /etc/systemd/system/
 sudo systemctl enable /etc/systemd/system/ike.service
 sudo systemctl start ike.service
