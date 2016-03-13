@@ -1,5 +1,4 @@
 #!/bin/bash
-export SHARED_SECRET="0s$(openssl rand -base64 64 2>/dev/null | tr -d '\n')"
 docker build -t ike:latest .
 sudo cp ike.service /etc/systemd/system/
 sudo systemctl enable /etc/systemd/system/ike.service

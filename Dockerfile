@@ -7,7 +7,7 @@ RUN  apt-get update \
 
 RUN rm /etc/ipsec.secrets
 
-ENV SHARED_SECRET $SHARED_SECRET
+RUN export SHARED_SECRET="0s$(openssl rand -base64 64 2>/dev/null | tr -d '\n')"
 
 ADD ./etc/* /etc/
 ADD ./bin/* /usr/bin/
