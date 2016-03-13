@@ -1,6 +1,6 @@
-# IKEv2 VPN Server on Docker
+# IKEv2 VPN Server on CoreOS and docker
 
-### Builds VPN server container, installs systemd service, and generates client config
+Builds VPN server container, installs systemd service, and generates client config
 
 #### 1. Clone repo to a CoreOS instance
 
