@@ -2,15 +2,21 @@
 
 ## 1. Clone repo to a CoreOS instance
 
-## 2. Run the build script
+    git clone https://github.com/johnpeterharvey/docker-ikev2-vpn-server.git
+
+## 2. Change to the cloned directory
+
+    cd docker-ikev2-vpn-server/
+
+## 3. Run the build script
 
     ./build.sh
 
-## 3. Copy the resulting file to your host over a secure connection
+## 4. Copy the resulting file to your host over a secure connection
 
     rsync -a --progress server:~/docker-ikev2-vpn-server/ike.mobileconfig .
 
-## 4. Install .mobileconfig
+## 5. Install .mobileconfig
 
 - **iOS 9 or later**: AirDrop the `.mobileconfig` file to your iOS 9 device, finish the **Install Profile** screen;
 - **OS X 10.11 El Capitan or later**: Double click the `.mobileconfig` file to start the *profile installation* wizard.
