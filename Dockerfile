@@ -7,6 +7,8 @@ RUN  apt-get update \
 
 RUN rm /etc/ipsec.secrets
 
+ENV SHARED_SECRET $SHARED_SECRET
+
 ADD ./etc/* /etc/
 ADD ./bin/* /usr/bin/
 

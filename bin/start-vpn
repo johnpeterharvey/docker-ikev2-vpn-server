@@ -30,7 +30,6 @@ iptables -t nat -A POSTROUTING -s 10.8.0.0/16 -o eth0 -j MASQUERADE
 
 # hotfix for openssl `unable to write 'random state'` stderr
 # Prefix '0s' defines following string as being base64 encoded
-SHARED_SECRET="0s$(openssl rand -base64 64 2>/dev/null | tr -d '\n')"
 [ -f /etc/ipsec.secrets ] || echo ": PSK \"${SHARED_SECRET}\"" > /etc/ipsec.secrets
 
 # hotfix for https://github.com/gaomd/docker-ikev2-vpn-server/issues/7
