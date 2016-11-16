@@ -6,7 +6,8 @@ Requires=docker.service
 [Service]
 TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill ike
-ExecStart=/usr/bin/docker start ike
+ExecStartPre=-/usr/bin/docker rm ike
+ExecStart=/usr/bin/docker run --name ike --privileged -p 500:500/udp -p 4500:4500/udp ike
 
 [Install]
 WantedBy=multi-user.target
