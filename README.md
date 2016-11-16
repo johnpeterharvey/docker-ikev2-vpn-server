@@ -21,6 +21,6 @@ Builds VPN server container, installs systemd service, and generates client conf
 #### 5. Install .mobileconfig
 
 - **iOS 9 or later**: AirDrop the `.mobileconfig` file to your iOS 9 device, finish the **Install Profile** screen;
-- **OS X 10.11 El Capitan or later**: Double click the `.mobileconfig` file to start the *profile installation* wizard.
+- **macOS 10.11 or later**: Double click the `.mobileconfig` file to start the *profile installation* wizard.
 
-*IKEv2 protocol requires iOS 8 or later, Mac OS X 10.11 El Capitan is supported as well.*
+*IKEv2 protocol requires iOS 8 or later, macOS 10.11 or later.*
